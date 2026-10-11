@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 03 - Colors &amp; Opacity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Colors &amp; Opacity</h1>
+
+  <h2>Named colors</h2>
+  <div class="palette">
+    <div class="swatch named-red">red</div>
+    <div class="swatch named-green">green</div>
+    <div class="swatch named-blue">blue</div>
+  </div>
+
+  <h2>HEX (6-digit)</h2>
+  <div class="palette">
+    <div class="swatch hex-1">#FF0000</div>
+    <div class="swatch hex-2">#00FF00</div>
+    <div class="swatch hex-3">#0000FF</div>
+  </div>
+
+  <h2>RGB</h2>
+  <div class="palette">
+    <div class="swatch rgb-1">rgb(255,0,0)</div>
+    <div class="swatch rgb-2">rgb(0,255,0)</div>
+    <div class="swatch rgb-3">rgb(0,0,255)</div>
+  </div>
+
+  <h2>RGBA (alpha)</h2>
+  <div class="palette">
+    <div class="swatch rgba-1">rgba(255,0,0,1)</div>
+    <div class="swatch rgba-2">rgba(0,255,0,0.6)</div>
+    <div class="swatch rgba-3">rgba(0,0,255,0.3)</div>
+  </div>
+
+  <h2>opacity vs RGBA</h2>
+  <div class="compare">
+    <div class="stripes">
+      <div class="box opacity-box">
+        <p>opacity: 0.5</p>
+        <p class="note">Text is faded too</p>
+      </div>
+    </div>
+    <div class="stripes">
+      <div class="box rgba-box">
+        <p>background: rgba(..., 0.5)</p>
+        <p class="note">Text stays solid</p>
+      </div>
+    </div>
+  </div>
+  <p class="explain">
+    <code>opacity</code> applies to the whole element, so the text and every child fade with it.
+    <code>rgba()</code> only changes that one property, so the background is see-through while the children stay fully opaque.
+  </p>
+</body>
+</html>
